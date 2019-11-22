@@ -5,7 +5,10 @@ class SubjectsController < ApplicationController
     render json: @subjects 
   end 
 
-
+  def show
+    @subject = Subject.find(params[:id])
+    render json: @subject
+  end
 
   private
 
