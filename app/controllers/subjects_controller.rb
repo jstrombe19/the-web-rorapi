@@ -1,9 +1,11 @@
 class SubjectsController < ApplicationController
-  before_action: :find_all_subjects, only: [:index]
+  before_action :find_all_subjects, only: [:index]
 
   def index 
     render json: @subjects 
   end 
+
+
 
   private
 
